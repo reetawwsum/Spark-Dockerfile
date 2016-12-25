@@ -24,6 +24,10 @@ To view Hadoop process status
 
 	$ jps
 
+To run Spark application in client mode
+
+	$ spark-shell --master yarn --deploy-mode client --driver-memory 1g --executor-memory 1g --executor-cores 1
+
 Clone this repo and
 
 	$ git clone https://github.com/reetawwsum/Spark-Dockerfile.git

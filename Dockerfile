@@ -10,7 +10,9 @@ ENV SPARK_HOME /usr/local/spark
 RUN mkdir $SPARK_HOME/yarn-remote-client
 ADD yarn-remote-client $SPARK_HOME/yarn-remote-client
 
-ENV PATH $PATH:$SPARK_HOME/bin:$HADOOP_PREFIX/bin
+ENV PATH $PATH:$SPARK_HOME/bin
+
+WORKDIR /usr/local/spark
 
 ADD bootstrap.sh /usr/local/src/bootstrap.sh
 RUN chown root:root /usr/local/src/bootstrap.sh

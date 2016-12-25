@@ -12,7 +12,11 @@ ADD yarn-remote-client $SPARK_HOME/yarn-remote-client
 
 ENV PATH $PATH:$SPARK_HOME/bin
 
-WORKDIR /usr/local/spark
+ENV PYSPARK_PYTHON /usr/bin/python2.7
+ENV PYSPARK_DRIVER_PYTHON /usr/local/bin/jupyter
+ENV PYSPARK_DRIVER_PYTHON_OPTS notebook
+
+WORKDIR /usr/local/src/notebooks
 
 ADD bootstrap.sh /usr/local/src/bootstrap.sh
 RUN chown root:root /usr/local/src/bootstrap.sh

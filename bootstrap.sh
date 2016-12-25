@@ -17,4 +17,4 @@ $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh
 $HADOOP_PREFIX/sbin/start-dfs.sh
 $HADOOP_PREFIX/sbin/start-yarn.sh
 
-/bin/bash
+pyspark

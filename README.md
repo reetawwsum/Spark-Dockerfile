@@ -18,7 +18,7 @@ Pull docker image from [DockerHub](https://hub.docker.com/r/reetawwsum/spark)
 
 To launch Spark
 
-	$ docker run --rm -t -i --name spark -p 50070:50070 -p 8088:8088 -p 8042:8042 -p 4040:4040 reetawwsum/spark --ip=0.0.0.0
+	$ docker run --rm -t -i --name spark -p 8888:8888 -p 50070:50070 -p 8088:8088 -p 8042:8042 -p 4040:4040 reetawwsum/spark --ip=0.0.0.0
 
 To view Hadoop process status
 

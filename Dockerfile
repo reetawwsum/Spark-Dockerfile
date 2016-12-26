@@ -14,7 +14,7 @@ ENV PATH $PATH:$SPARK_HOME/bin
 
 ENV PYSPARK_PYTHON /usr/bin/python2.7
 ENV PYSPARK_DRIVER_PYTHON /usr/local/bin/jupyter
-ENV PYSPARK_DRIVER_PYTHON_OPTS notebook
+ENV PYSPARK_DRIVER_PYTHON_OPTS "notebook --NotebookApp.open_browser=False --NotebookApp.ip='*'"
 
 WORKDIR /usr/local/src/notebooks
 

@@ -17,5 +17,4 @@ $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh
 $HADOOP_PREFIX/sbin/start-dfs.sh
 $HADOOP_PREFIX/sbin/start-yarn.sh
 
-# pyspark --master yarn --deploy-mode client
-/bin/bash
+pyspark --master yarn --deploy-mode client

@@ -18,6 +18,8 @@ ENV PYSPARK_PYTHON /usr/local/bin/python2.7
 ENV PYSPARK_DRIVER_PYTHON /usr/local/bin/jupyter
 ENV PYSPARK_DRIVER_PYTHON_OPTS "notebook --NotebookApp.open_browser=False --NotebookApp.ip='*'"
 
+ADD notebooks /usr/local/src/notebooks
+
 WORKDIR /usr/local/src/notebooks
 
 ADD bootstrap.sh /usr/local/src/bootstrap.sh

@@ -44,5 +44,9 @@ to build image from Dockerfile:
 
 	$ docker build -t spark .
 
+to build PySpark script present in current directory from Sublime Text 3:
+
+	$ cp PySpark.sublime-build [user-packages folder]
+
 ## License
 [The MIT License (MIT)](LICENSE)

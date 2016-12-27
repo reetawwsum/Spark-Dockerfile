@@ -1,0 +1,3 @@
+{
+	"shell_cmd": "docker exec spark /bin/bash -c 'unset PYSPARK_DRIVER_PYTHON && spark-submit --master yarn --deploy-mode client $file_name'"
+}

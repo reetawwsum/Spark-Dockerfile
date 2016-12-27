@@ -31,9 +31,9 @@ To view Hadoop process status:
 
 	$ jps
 
-To run Spark application in client mode:
+To run SimpleApp self-contained application in client mode:
 
-	$ spark-shell --master yarn --deploy-mode client --driver-memory 1g --executor-memory 1g --executor-cores 1
+	$ unset PYSPARK_DRIVER_PYTHON && spark-submit --master yarn --deploy-mode client SimpleApp.py
 
 Clone this repo and
 

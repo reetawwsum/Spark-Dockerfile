@@ -10,6 +10,8 @@ ENV SPARK_HOME /usr/local/spark
 RUN mkdir $SPARK_HOME/yarn-remote-client
 ADD yarn-remote-client $SPARK_HOME/yarn-remote-client
 
+ADD log4j.properties $SPARK_HOME/conf/log4j.properties
+
 ENV PATH $PATH:$SPARK_HOME/bin
 
 ENV PYSPARK_PYTHON /usr/local/bin/python2.7

@@ -20,6 +20,7 @@ RUN $HADOOP_BOOTSTRAP && \
 	hdfs dfs -put $SPARK_HOME/jars /spark
 
 ENV PATH $PATH:$SPARK_HOME/bin
+ENV LD_LIBRARY_PATH /usr/local/hadoop/lib/native/:$LD_LIBRARY_PATH
 
 ENV PYSPARK_PYTHON /usr/local/bin/python2.7
 ENV PYSPARK_DRIVER_PYTHON /usr/local/bin/jupyter

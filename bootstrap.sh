@@ -11,6 +11,8 @@ sed -i s/HOSTNAME/$HOSTNAME/ $SPARK_HOME/yarn-remote-client/core-site.xml
 sed -i s/HOSTNAME/$HOSTNAME/ $SPARK_HOME/yarn-remote-client/yarn-site.xml
 
 echo "spark.yarn.jars hdfs:///spark/*" > $SPARK_HOME/conf/spark-defaults.conf
+echo "spark.driver.extraClassPath $SPARK_HOME/local-jars/*" >> $SPARK_HOME/conf/spark-defaults.conf
+echo "spark.executor.extraClassPath $SPARK_HOME/local-jars/*" >> $SPARK_HOME/conf/spark-defaults.conf
 cp $SPARK_HOME/conf/metrics.properties.template $SPARK_HOME/conf/metrics.properties
 
 /usr/sbin/sshd

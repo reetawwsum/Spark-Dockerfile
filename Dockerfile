@@ -10,6 +10,9 @@ ENV SPARK_HOME /usr/local/spark
 RUN mkdir $SPARK_HOME/yarn-remote-client
 ADD yarn-remote-client $SPARK_HOME/yarn-remote-client
 
+RUN mkdir $SPARK_HOME/local-jars
+ADD local-jars $SPARK_HOME/local-jars
+
 ADD log4j.properties $SPARK_HOME/conf/log4j.properties
 
 RUN $HADOOP_BOOTSTRAP && \

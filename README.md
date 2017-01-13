@@ -7,7 +7,7 @@ Dockerfile for Spark
 ## Features
 
 1. [reetawwsum/hadoop](https://hub.docker.com/r/reetawwsum/hadoop)
-2. Spark 2.0.2
+2. Spark 2.1.0
 
 ## Usage
 

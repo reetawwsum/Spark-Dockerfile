@@ -2,8 +2,8 @@ FROM reetawwsum/hadoop
 
 MAINTAINER Reet Awwsum <reetawwsum@yahoo.com>
 
-RUN curl http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz | tar -xz -C /usr/local
-RUN ln -s /usr/local/spark-2.0.2-bin-hadoop2.7 /usr/local/spark
+RUN curl http://d3kbcqa49mib13.cloudfront.net/spark-2.1.0-bin-hadoop2.7.tgz | tar -xz -C /usr/local
+RUN ln -s /usr/local/spark-2.1.0-bin-hadoop2.7 /usr/local/spark
 
 ENV SPARK_HOME /usr/local/spark
 

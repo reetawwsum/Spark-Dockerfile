@@ -23,8 +23,11 @@ ENV PATH $PATH:$SPARK_HOME/bin
 ENV LD_LIBRARY_PATH /usr/local/hadoop/lib/native/:$LD_LIBRARY_PATH
 
 ENV PYSPARK_PYTHON /usr/local/bin/python2.7
-ENV PYSPARK_DRIVER_PYTHON /usr/local/bin/jupyter
-ENV PYSPARK_DRIVER_PYTHON_OPTS "notebook --NotebookApp.open_browser=False --NotebookApp.ip='*'"
+ENV PYTHONPATH=$SPARK_HOME/python/:$PYTHONPATH
+ENV PYTHONPATH=$SPARK_HOME/python/lib/py4j-0.10.4-src.zip:$PYTHONPATH
+
+RUN pip install -i https://pypi.anaconda.org/hyoon/simple toree
+RUN jupyter toree install
 
 ADD notebooks /usr/local/src/notebooks
 

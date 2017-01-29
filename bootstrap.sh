@@ -20,4 +20,4 @@ $HADOOP_PREFIX/etc/hadoop/hadoop-env.sh
 $HADOOP_PREFIX/sbin/start-dfs.sh
 $HADOOP_PREFIX/sbin/start-yarn.sh
 
-pyspark --master yarn --deploy-mode client
+jupyter notebook --NotebookApp.open_browser=False --NotebookApp.ip='*'

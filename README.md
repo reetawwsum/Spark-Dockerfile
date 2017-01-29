@@ -31,9 +31,13 @@ To view Hadoop process status:
 
 	$ jps
 
-To run SimpleApp self-contained application in client mode:
+To run SimpleApp (Scala) self-contained application:
 
-	$ unset PYSPARK_DRIVER_PYTHON && spark-submit --master yarn --deploy-mode client SimpleApp.py
+	$ spark-submit --class "SimpleApp" --master local[4] Simple-Project/target/scala-2.11/simple-project_2.11-1.0.jar
+
+To run SimpleApp (Python) self-contained application:
+
+	$ spark-submit --master local[4] SimpleApp.py
 
 Clone this repo and
 

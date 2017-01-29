@@ -1,9 +1,7 @@
-from __future__ import print_function
-from __future__ import absolute_import
-
+"""SimpleApp.py"""
 from pyspark import SparkContext
 
-logFile = "file:///usr/local/src/notebooks/data/README.md"
+logFile = "file:///usr/local/spark/README.md"
 sc = SparkContext("local", "Simple App")
 logData = sc.textFile(logFile).cache()
 
